@@ -1,4 +1,4 @@
-  const state = {
+const state = {
   products: [
     {
       name: "LeBron 17",
@@ -91,7 +91,7 @@ const getters = {
 
 const actions = {
   purchase({ commit }, product) {
-    console.log(product);
+    //console.log(product);
     commit("Buy", product);
     commit("getTotal");
   },
@@ -139,9 +139,9 @@ const mutations = {
     state.total = 0;
     state.purchasedproducts.forEach(element => {
       state.total = state.total + element.price;
-      console.log(state.total, element.price);
+      //console.log(state.total, element.price);
     });
-    console.log(state.total, "total");
+    //console.log(state.total, "total");
   }
 };
 
